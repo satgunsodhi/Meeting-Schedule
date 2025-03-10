@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.49.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "name": "meeting-scheduler",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000M\u0000e\u0000e\u0000t\u0000i\u0000n\u0000g\u0000-\u0000S\u0000c\u0000h\u0000e\u0000d\u0000u\u0000l\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satgunsodhi/Meeting-Schedule.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satgunsodhi/Meeting-Schedule/issues"
+  },
+  "homepage": "https://github.com/satgunsodhi/Meeting-Schedule#readme"
+}
