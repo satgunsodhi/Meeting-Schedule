@@ -10,6 +10,8 @@ const useColorStore = create<ColorStore>((set) => ({
     toggleTheme: () => set((state) => {
         const newTheme = state.theme === 'light' ? 'dark' : 'light';
         localStorage.setItem('theme', newTheme); // Save theme to localStorage
+        document.body.classList.remove(state.theme + '-mode'); // Remove old class
+        document.body.classList.add(newTheme + '-mode'); // Add new class
         return { theme: newTheme };
     }),
 }));

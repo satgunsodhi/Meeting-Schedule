@@ -11,7 +11,7 @@ const Navbar = () => {
       maxWidth="lg"
       sx={{
         px: 2,
-        backgroundColor: theme === "light" ? "#ffffff" : "#333333",
+        backgroundColor: theme === "light" ? "#ffffff" : "#222222",
         color: theme === "light" ? "#000000" : "#ffffff",
       }}
     >

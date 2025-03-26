@@ -6,20 +6,30 @@ import Create from "./pages/create";
 import Navbar from './components/Navbar';
 import Logout from "./pages/logout";
 import Schedule from "./pages/schedule";
+import useColorStore from "./store/color";
 
 function App() {
+  const { theme } = useColorStore();
+
   return (
-    <Box>
+    <Box
+      sx={{
+        width: "100vw",
+        minHeight: "100vh",
+        backgroundColor: theme === "light" ? "#ffffff" : "#222222",
+        color: theme === "light" ? "#000000" : "#ffffff",
+      }}
+    >
       <Navbar />
-              <Routes>
-                <Route path="/" element={<Calendar />} />
-                <Route path="/create" element={<Create />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/logout" element={<Logout />} />
-                <Route path="/schedule" element={<Schedule />} />
-              </Routes>
+      <Routes>
+        <Route path="/" element={<Calendar />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/schedule" element={<Schedule />} />
+      </Routes>
     </Box>
-  )
+  );
 }
 
-export default App
+export default App;
