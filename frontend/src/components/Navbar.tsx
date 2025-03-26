@@ -1,21 +1,18 @@
-import React from 'react';
 import { AddBox, DarkMode, LightMode } from '@mui/icons-material';
 import { Button, Container, Stack, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import useColorStore from '../store/color';
 
 const Navbar = () => {
-  const [colorMode, setColorMode] = React.useState("light");
-
-  const toggleColorMode = () => {
-    setColorMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-  };
+  const { theme, toggleTheme } = useColorStore();
 
   return (
     <Container
       maxWidth="lg"
       sx={{
         px: 2,
-        backgroundColor: colorMode === "light" ? "#ffffff" : "#333333",
-        color: colorMode === "light" ? "#000000" : "#ffffff",
+        backgroundColor: theme === "light" ? "#ffffff" : "#333333",
+        color: theme === "light" ? "#000000" : "#ffffff",
       }}
     >
       <Stack
@@ -36,13 +33,28 @@ const Navbar = () => {
             color: "transparent",
           }}
         >
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            Meeting Scheduler
+          </Link>
         </Typography>
         <Stack direction="row" spacing={2} alignItems="center">
-          
+          <Link
+            to="/create"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
             <AddBox fontSize="medium" aria-label="Create" />
-
-          <Button onClick={toggleColorMode} aria-label="Toggle Color Mode">
-            {colorMode === "light" ? <DarkMode /> : <LightMode />}
+          </Link>
+          <Button onClick={toggleTheme} aria-label="Toggle Color Mode">
+            {theme === "light" ? <DarkMode /> : <LightMode />}
           </Button>
         </Stack>
       </Stack>
