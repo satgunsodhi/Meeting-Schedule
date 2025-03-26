@@ -14,10 +14,9 @@ function App() {
   return (
     <Box
       sx={{
-        width: "100vw",
-        minHeight: "100vh",
         backgroundColor: theme === "light" ? "#ffffff" : "#222222",
         color: theme === "light" ? "#000000" : "#ffffff",
+        border: "0px solid #cccccc",
       }}
     >
       <Navbar />
