@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "build": "npm install && npm install --prefix frontend && vite build --prefix frontend",
+    "start": "cross-env NODE_ENV=production node server.js"
+  }
+}
